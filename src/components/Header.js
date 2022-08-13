@@ -15,7 +15,7 @@ export default()=>{
           <a class="nav-link active" aria-current="page" href="/employees">Employees</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Add Employee</a>
+          <a class="nav-link" href="add-employee/">Add Employee</a>
         </li>
        
     

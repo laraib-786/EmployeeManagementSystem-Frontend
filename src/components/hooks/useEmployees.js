@@ -1,11 +1,11 @@
 import { useEffect,useState } from "react";
-import ListEmployeeService from "../services/ListEmployeeService";
+import EmployeeService from "../services/EmployeeService";
 
 const useEmployees=()=>{
     const [employees,setEmployees]=useState([]);
 
     useEffect(()=>{
-        ListEmployeeService.fetchAllEmployees().then(res=>{
+        EmployeeService.fetchAllEmployees().then(res=>{
             setEmployees(res.data);
         });
     },[]);

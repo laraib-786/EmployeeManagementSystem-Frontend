@@ -1,16 +1,26 @@
+
 import React from "react";
 
 import useEmployees from "./hooks/useEmployees";
+import {useNavigate} from "react-router-dom";
 
 export default ()=>{
  //   const classes=styles();
     
    const {employees}=useEmployees();
-  
+   const navigate=useNavigate();
+   const handleClick=(event)=>{
+        navigate('/add-employee');
+
+   }
+
     return(
-        <>
-        <div className="">
+        <div>
             <h2 className="text-center">Employees List</h2>
+                
+            <div className="row-1">
+                <button  className="btn btn-primary" onClick={handleClick}> Add</button>
+            </div>
             <div className="row">
                 <table className="table table-striped table-bordered">
                     <thead>
@@ -36,7 +46,7 @@ export default ()=>{
                 </table>
             </div>
 
+        
         </div>
-        </>
     );
 };
